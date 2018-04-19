@@ -13,6 +13,12 @@ module nspr
        integer(c_int32_t) pl_strlen
      end function pl_strlen
 
+     function pr_cleanup() &
+          bind(c, name="PR_Cleanup")
+       use iso_c_binding, only: c_int
+       integer(c_int) pr_cleanup
+     end function pr_cleanup
+
      function pr_create_process(path, argv, envp, attr) &
           bind(c, name="PR_CreateProcess")
        use iso_c_binding, only: c_ptr
