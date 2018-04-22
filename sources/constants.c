@@ -1,10 +1,12 @@
 #include <nspr.h>
 #include <stdio.h>
 
+#define INT_PARAMETER "integer(c_int), parameter :: "
+
 int main(void)
 {
-	printf("integer(c_int) :: pr_failure = %d\n", PR_FAILURE);
-	printf("integer(c_int) :: pr_success = %d\n", PR_SUCCESS);
+	printf(INT_PARAMETER "pr_failure = %d\n", PR_FAILURE);
+	printf(INT_PARAMETER "pr_success = %d\n", PR_SUCCESS);
 
 	return 0;
 }
